@@ -17,6 +17,8 @@ class Dropdown extends Component {
         this.setState({
             value: val
         });
+
+        this.props.changeHandler(val);
     };
 
     toggleOpen = e => {

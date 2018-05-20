@@ -1,6 +1,11 @@
 $fg-color-black: #393939;
-$border-color-grey: #e3e3e3;
+$border-color-grey: #cfcfcf;
 $bg-color-grey: #e3e3e3;
+body {
+    font-family: arial;
+    font-size: 14px;
+}
+
 .dropdown {
     color: $fg-color-black;
     &__control {
@@ -19,7 +24,7 @@ $bg-color-grey: #e3e3e3;
             bottom: 0;
             top: 0;
             margin: auto;
-            background: url(/static/img/down.png);
+            background: url(/static/img/down.svg);
             content: " ";
             color: #737373;
             font-size: 16px;
@@ -35,6 +40,7 @@ $bg-color-grey: #e3e3e3;
         right: 0;
         background: rgba(255, 255, 255, 0.5);
         display: none;
+        z-index: 1;
         &--visible {
             display: block;
         }
@@ -55,7 +61,7 @@ $bg-color-grey: #e3e3e3;
             overflow: hidden;
             width: 90%;
             bottom: 0;
-            position: absolute;
+            position: fixed;
             left: 5%;
             background-color: #fff;
             border-bottom: 0;
@@ -63,6 +69,7 @@ $bg-color-grey: #e3e3e3;
             transform: translateY(120%);
             height: 60%;
             transition: transform .3s;
+            z-index: 1;
             &--visible {
                 transform: translateY(0);
             }

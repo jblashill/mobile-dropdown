@@ -40,7 +40,13 @@ export default class Index extends Component {
             isOpen: !this.state.isOpen
         });
     }
-    handleDropdownChange() {}
+    handleDropdownChange(el, val) {
+        this.setState({
+            [el]: val
+        });
+
+        console.log(el, val);
+    }
     render() {
         return (
             <div>
@@ -53,14 +59,17 @@ export default class Index extends Component {
                     />
                 </Head>
                 <Dropdown
-                    placeholder="Select Value"
-                    changeHandler={this.handleDropdownChange}
+                    placeholder="Choose Color"
+                    changeHandler={this.handleDropdownChange.bind(
+                        this,
+                        "dropdown1"
+                    )}
                     optionalDropdownTitle="Choose Color"
                 >
                     <Option value="1">Red</Option>
-                    <Option value="2">Red</Option>
-                    <Option value="3">Red</Option>
-                    <Option value="4">Red</Option>
+                    <Option value="2">Green</Option>
+                    <Option value="3">Blue</Option>
+                    <Option value="4">Yellow</Option>
                     <Option value="5">Red</Option>
                     <Option value="6">Red</Option>
                     <Option value="7">Red</Option>
@@ -69,6 +78,31 @@ export default class Index extends Component {
                     <Option value="10">Pink</Option>
                     <Option value="11">Green</Option>
                     <Option value="12">Blue</Option>
+                    <Option value="13">Red</Option>
+                    <Option value="14">Orange</Option>
+                </Dropdown>
+                <Dropdown
+                    placeholder="Choose Color 1"
+                    changeHandler={this.handleDropdownChange.bind(
+                        this,
+                        "dropdown2"
+                    )}
+                    optionalDropdownTitle="Choose Color"
+                >
+                    <Option value="1">Red</Option>
+                    <Option value="2">Green</Option>
+                    <Option value="3">Blue</Option>
+                    <Option value="4">Yello</Option>
+                    <Option value="5">Red</Option>
+                    <Option value="6">Red</Option>
+                    <Option value="7">Red</Option>
+                    <Option value="8">Red</Option>
+                    <Option value="9">Red</Option>
+                    <Option value="10">Pink</Option>
+                    <Option value="11">Green</Option>
+                    <Option value="12">Blue</Option>
+                    <Option value="13">Red</Option>
+                    <Option value="14">Orange</Option>
                 </Dropdown>
             </div>
         );
