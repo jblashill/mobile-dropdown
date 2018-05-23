@@ -3,14 +3,9 @@ import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import classNames from "classnames";
 
-import "./../css/style.scss";
-
 class Option extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isOpen: false
-        };
     }
 
     handleChange = () => {
@@ -23,15 +18,11 @@ class Option extends Component {
                 [`${baseClass}__option--selected`]: this.props.selected
             });
 
-        // if (typeof this.props.children === "string") {
         return (
             <div className={optionClass} onClick={this.handleChange}>
                 {this.props.children}
             </div>
         );
-        // } else {
-        //     return this.props.children;
-        // }
     }
 }
 
