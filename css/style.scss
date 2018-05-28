@@ -1,0 +1,106 @@
+$fg-color-black: #393939;
+$border-color-grey: #cfcfcf;
+$bg-color-grey: #e3e3e3;
+body {
+    font-family: arial;
+    font-size: 14px;
+}
+
+.dropdown {
+    color: $fg-color-black;
+    &__control {
+        border-radius: 2px;
+        border: 1px solid $border-color-grey;
+        padding: 10px 30px 10px 15px;
+        position: relative;
+    }
+    &__placeholder {
+        color: lighten($fg-color-black, 30%);
+    }
+    &__arrow {
+        &:before {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            background: url(/static/img/down.svg);
+            content: " ";
+            color: #737373;
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.5);
+        display: none;
+        z-index: 1;
+        &--visible {
+            display: block;
+        }
+    }
+    &__option {
+        line-height: 24px;
+        padding: 10px 20px;
+        &:hover,
+        &:active,
+        &--selected {
+            background-color: $bg-color-grey;
+        }
+        &+& {
+            border-top: 1px solid $border-color-grey
+        }
+        &-wrapper2 {
+            display: block;
+            overflow: hidden;
+            width: 90%;
+            bottom: 0;
+            position: fixed;
+            left: 5%;
+            background-color: #fff;
+            border-bottom: 0;
+            line-height: 18px;
+            transform: translateY(120%);
+            height: 60%;
+            transition: transform .3s;
+            z-index: 1;
+            &--visible {
+                transform: translateY(0);
+            }
+        }
+        &-wrapper1 {
+            overflow: scroll;
+            margin-top: 40px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid $border-color-grey;
+        }
+    }
+    &__title {
+        padding: 0 20px;
+        font-weight: bold;
+        border: 1px solid $border-color-grey;
+        border-bottom: 0;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+// overflow: scroll; // -webkit-transform: translateY(100%);
+// -webkit-transition: -webkit-transform .2s;
+// transition: -webkit-transform .2s;
+// transition: transform .2s, -webkit-transform .2s;
+// transform: translateY(0);

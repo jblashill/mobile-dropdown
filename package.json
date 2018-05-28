@@ -1,0 +1,29 @@
+{
+  "name": "mobile-dropdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jblashill/mobile-dropdown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jblashill/mobile-dropdown/issues"
+  },
+  "homepage": "https://github.com/jblashill/mobile-dropdown#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "classnames": "^2.2.5",
+    "next": "^6.0.3",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
